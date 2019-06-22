@@ -1,3 +1,43 @@
-page-home {
 
+ion-content {
+    // background: black !important;
+    .first-frame {
+        border: 20px groove teal;
+    }
+
+    .icon-container {
+        margin: 0 auto;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        ion-icon {
+            color: black;
+            margin-right: 10px;
+        }
+        .browser-icon {
+            position: absolute;
+            right: 28px;
+        }
+    }
+
+    .range-item {
+        position: fixed;
+        margin: 20px;
+        bottom: 0;
+        text-align: center;
+        width: 100%; //320px
+
+        ion-icon {
+            color: #000;
+        }
+
+        ion-range {
+            --knob-background: black;
+            --bar-background: black;
+            --bar-background-active: black;
+            margin-bottom: 5px;
+        }
+    }
 }
+
+

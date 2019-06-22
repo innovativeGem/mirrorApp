@@ -1,14 +1,22 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <div class="first-frame" [style.width.px]='screenWidth' [style.height.px]='screenHeight'>
+    <div class="icon-container">
+      <ion-icon name="remove"></ion-icon>
+      <ion-icon name="sunny"></ion-icon>
+      <ion-icon name="add"></ion-icon>
+      <ion-icon class="browser-icon" ios="ios-browsers" md="md-browsers" (click)="getFrameColor()"></ion-icon>
+    </div>
+  </div>
+  <ion-item lines="none" class="range-item">
+    <ion-range
+      [(ngModel)]="brightnessVal"
+      min="0"
+      max="1"
+      [step]="brightnessVal"
+      (ionChange)="handleBrightnessChange($event)"
+      >
+      <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+      <ion-icon slot="end" name="sunny"></ion-icon>
+    </ion-range>
+  </ion-item>
 </ion-content>
